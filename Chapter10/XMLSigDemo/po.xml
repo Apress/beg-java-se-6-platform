@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<po>
+   <items>
+     <item>
+       <code>hw-1021</code>
+       <desc>Hammer</desc>
+       <qty>5</qty>
+       <unitcost>11.99</unitcost>
+     </item>
+     <item>
+       <code>hw-2103</code>
+       <desc>Solar lights</desc>
+       <qty>10</qty>
+       <unitcost>24.99</unitcost>
+     </item>
+   </items>
+</po>

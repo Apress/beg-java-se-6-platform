@@ -1,0 +1,489 @@
+<project name="build" default="buildall" basedir=".">
+  <description>
+    build book code
+  </description>
+
+  <property name="dest" location="bin"/>
+  <property name="src" location="${basedir}"/>
+
+  <property environment="env"/>
+
+  <target name="buildall" depends="build01,build02,build03,build04,build05,
+                build06,build07,build08,build09,build10,buildXB,buildXC,
+                buildXD"
+          description="build everything">
+  </target>
+
+  <target name="build01" description="build chapter 1 code">
+    <mkdir dir="${dest}/Chapter01/CityNavigator"/>
+    <javac srcdir="${src}/Chapter01/CityNavigator"
+           destdir="${dest}/Chapter01/CityNavigator"/>
+
+    <mkdir dir="${dest}/Chapter01/Notepad"/>
+    <javac srcdir="${src}/Chapter01/Notepad"
+           destdir="${dest}/Chapter01/Notepad"/>
+    <copy toDir="${dest}/Chapter01/Notepad">
+      <fileset dir="${src}/Chapter01/Notepad">
+        <include name="*.gif"/>
+      </fileset>
+    </copy>
+
+    <mkdir dir="${dest}/Chapter01/NumberFormatRounding"/>
+    <javac srcdir="${src}/Chapter01/NumberFormatRounding"
+           destdir="${dest}/Chapter01/NumberFormatRounding"/>
+
+    <mkdir dir="${dest}/Chapter01/SaveToGIF"/>
+    <javac srcdir="${src}/Chapter01/SaveToGIF"
+           destdir="${dest}/Chapter01/SaveToGIF"/>
+
+    <mkdir dir="${dest}/Chapter01/WindowIcons"/>
+    <javac srcdir="${src}/Chapter01/WindowIcons"
+           destdir="${dest}/Chapter01/WindowIcons"/>
+
+    <mkdir dir="${dest}/Chapter01/Windows"/>
+    <javac srcdir="${src}/Chapter01/Windows"
+           destdir="${dest}/Chapter01/Windows"/>
+  </target>
+
+  <target name="build02" description="build chapter 2 code">
+    <mkdir dir="${dest}/Chapter02/CompileFiles"/>
+    <javac srcdir="${src}/Chapter02/CompileFiles"
+           destdir="${dest}/Chapter02/CompileFiles"/>
+
+    <mkdir dir="${dest}/Chapter02/CompilerInfo"/>
+    <javac srcdir="${src}/Chapter02/CompilerInfo"
+           destdir="${dest}/Chapter02/CompilerInfo"/>
+
+    <mkdir dir="${dest}/Chapter02/CompileString"/>
+    <javac srcdir="${src}/Chapter02/CompileString"
+           destdir="${dest}/Chapter02/CompileString"/>
+
+    <mkdir dir="${dest}/Chapter02/EnumAlternateJavaCompilers"/>
+    <javac srcdir="${src}/Chapter02/EnumAlternateJavaCompilers"
+           destdir="${dest}/Chapter02/EnumAlternateJavaCompilers"/>
+
+    <mkdir dir="${dest}/Chapter02/Login"/>
+    <javac srcdir="${src}/Chapter02/Login"
+           destdir="${dest}/Chapter02/Login"/>
+
+    <mkdir dir="${dest}/Chapter02/PartitionSpace"/>
+    <javac srcdir="${src}/Chapter02/PartitionSpace"
+           destdir="${dest}/Chapter02/PartitionSpace"/>
+
+    <mkdir dir="${dest}/Chapter02/Permissions"/>
+    <javac srcdir="${src}/Chapter02/Permissions"
+           destdir="${dest}/Chapter02/Permissions"/>
+
+    <mkdir dir="${dest}/Chapter02/PostfixCalc"/>
+    <javac srcdir="${src}/Chapter02/PostfixCalc"
+           destdir="${dest}/Chapter02/PostfixCalc"/>
+
+    <mkdir dir="${dest}/Chapter02/ProductDB"/>
+    <javac srcdir="${src}/Chapter02/ProductDB"
+           destdir="${dest}/Chapter02/ProductDB"/>
+  </target>
+
+  <target name="build03" description="build chapter 3 code">
+    <mkdir dir="${dest}/Chapter03/DocViewer"/>
+    <javac srcdir="${src}/Chapter03/DocViewer"
+           destdir="${dest}/Chapter03/DocViewer"/>
+    <copy file="${src}/Chapter03/DocViewer/dvlogo.jpg"
+          toDir="${dest}/Chapter03/DocViewer"/>
+
+    <mkdir dir="${dest}/Chapter03/DynamicLayout"/>
+    <javac srcdir="${src}/Chapter03/DynamicLayout"
+           destdir="${dest}/Chapter03/DynamicLayout"/>
+
+    <mkdir dir="${dest}/Chapter03/FileManager"/>
+    <javac srcdir="${src}/Chapter03/FileManager"
+           destdir="${dest}/Chapter03/FileManager"/>
+
+    <mkdir dir="${dest}/Chapter03/QuickLaunch"/>
+    <javac srcdir="${src}/Chapter03/QuickLaunch"
+           destdir="${dest}/Chapter03/QuickLaunch"/>
+
+    <mkdir dir="${dest}/Chapter03/UnitsConverter"/>
+    <javac srcdir="${src}/Chapter03/UnitsConverter"
+           destdir="${dest}/Chapter03/UnitsConverter"/>
+    <copy file="${src}/Chapter03/UnitsConverter/uchelp.html"
+          toDir="${dest}/Chapter03/UnitsConverter"/>
+  </target>
+
+  <target name="build04" description="build chapter 4 code">
+    <mkdir dir="${dest}/Chapter04/Browser"/>
+    <javac srcdir="${src}/Chapter04/Browser"
+           destdir="${dest}/Chapter04/Browser"/>
+    <copy file="${src}/Chapter04/Browser/close.gif"
+          toDir="${dest}/Chapter04/Browser"/>
+
+    <mkdir dir="${dest}/Chapter04/BrowserWithPrint"/>
+    <javac srcdir="${src}/Chapter04/BrowserWithPrint"
+           destdir="${dest}/Chapter04/BrowserWithPrint"/>
+    <copy file="${src}/Chapter04/BrowserWithPrint/close.gif"
+          toDir="${dest}/Chapter04/BrowserWithPrint"/>
+
+    <mkdir dir="${dest}/Chapter04/BugLog"/>
+    <javac srcdir="${src}/Chapter04/BugLog"
+           destdir="${dest}/Chapter04/BugLog"/>
+
+    <mkdir dir="${dest}/Chapter04/PriceList"/>
+    <javac srcdir="${src}/Chapter04/PriceList"
+           destdir="${dest}/Chapter04/PriceList"/>
+
+    <mkdir dir="${dest}/Chapter04/PrimeCheck"/>
+    <javac srcdir="${src}/Chapter04/PrimeCheck"
+           destdir="${dest}/Chapter04/PrimeCheck"/>
+
+    <mkdir dir="${dest}/Chapter04/TextDrop"/>
+    <javac srcdir="${src}/Chapter04/TextDrop"
+           destdir="${dest}/Chapter04/TextDrop"/>
+  </target>
+
+  <target name="build05" description="build chapter 5 code">
+    <mkdir dir="${dest}/Chapter05/CurrencyNameProviderImpl"/>
+    <javac srcdir="${src}/Chapter05/CurrencyNameProviderImpl"
+           destdir="${dest}/Chapter05/CurrencyNameProviderImpl"/>
+    <copy toDir="${dest}/Chapter05/CurrencyNameProviderImpl">
+      <fileset dir="${src}/Chapter05/CurrencyNameProviderImpl">
+        <exclude name="*.java"/>
+      </fileset>
+    </copy>
+    <jar destfile="${dest}/Chapter05/CurrencyNameProviderImpl/tiER.jar"
+         basedir="${dest}/Chapter05/CurrencyNameProviderImpl"/>
+
+    <mkdir dir="${dest}/Chapter05/DateClient"/>
+    <javac srcdir="${src}/Chapter05/DateClient"
+           destdir="${dest}/Chapter05/DateClient"/>
+
+    <mkdir dir="${dest}/Chapter05/DateServer"/>
+    <javac srcdir="${src}/Chapter05/DateServer"
+           destdir="${dest}/Chapter05/DateServer"/>
+    <copy toDir="${dest}/Chapter05/DateServer">
+      <fileset dir="${src}/Chapter05/DateServer">
+        <include name="*.properties"/>
+      </fileset>
+    </copy>
+
+    <mkdir dir="${dest}/Chapter05/RemoveAccents"/>
+    <javac srcdir="${src}/Chapter05/RemoveAccents"
+           destdir="${dest}/Chapter05/RemoveAccents"
+           encoding="iso-8859-1"/>
+
+    <mkdir dir="${dest}/Chapter05/ShowCalPage"/>
+    <javac srcdir="${src}/Chapter05/ShowCalPage"
+           destdir="${dest}/Chapter05/ShowCalPage"/>
+    <copy file="${src}/Chapter05/ShowCalPage/ShowCalPage.html"
+          toDir="${dest}/Chapter05/ShowCalPage"/>
+
+    <mkdir dir="${dest}/Chapter05/ShowCurrencies"/>
+    <javac srcdir="${src}/Chapter05/ShowCurrencies"
+           destdir="${dest}/Chapter05/ShowCurrencies"/>
+  </target>
+
+  <target name="build06" description="build chapter 6 code">
+    <mkdir dir="${dest}/Chapter06/EmployeeInit"/>
+    <javac srcdir="${src}/Chapter06/EmployeeInit"
+           destdir="${dest}/Chapter06/EmployeeInit"/>
+    <copy file="${src}/Chapter06/EmployeeInit/duke.png"
+          toDir="${dest}/Chapter06/EmployeeInit"/>
+
+    <mkdir dir="${dest}/Chapter06/EmployeeShow"/>
+    <javac srcdir="${src}/Chapter06/EmployeeShow"
+           destdir="${dest}/Chapter06/EmployeeShow"/>
+  </target>
+
+  <target name="build07" description="build chapter 7 code">
+    <mkdir dir="${dest}/Chapter07/BasicAgent"/>
+    <javac srcdir="${src}/Chapter07/BasicAgent"
+           destdir="${dest}/Chapter07/BasicAgent"/>
+    <jar destfile="${dest}/Chapter07/BasicAgent/basicAgent.jar"
+         manifest="${src}/Chapter07/BasicAgent/manifest.mf"
+         basedir="${dest}/Chapter07/BasicAgent"
+         includes="BasicAgent.class"/>
+
+    <mkdir dir="${dest}/Chapter07/BasicPlugin"/>
+    <javac classpath="${env.JAVA_HOME}/lib/jconsole.jar"
+           srcdir="${src}/Chapter07/BasicPlugin"
+           destdir="${dest}/Chapter07/BasicPlugin"/>
+    <copy toDir="${dest}/Chapter07/BasicPlugin">
+      <fileset dir="${src}/Chapter07/BasicPlugin">
+        <exclude name="*.java"/>
+      </fileset>
+    </copy>
+    <jar destfile="${dest}/Chapter07/BasicPlugin/basicPlugin.jar"
+         basedir="${dest}/Chapter07/BasicPlugin"/>
+
+    <mkdir dir="${dest}/Chapter07/ThreadInfoViewer"/>
+    <javac srcdir="${src}/Chapter07/ThreadInfoViewer"
+           destdir="${dest}/Chapter07/ThreadInfoViewer"/>
+  </target>
+
+  <target name="build08" description="build chapter 8 code">
+    <mkdir dir="${dest}/Chapter08/BasicAuthGiven"/>
+    <javac srcdir="${src}/Chapter08/BasicAuthGiven"
+           destdir="${dest}/Chapter08/BasicAuthGiven"/>
+
+    <mkdir dir="${dest}/Chapter08/BasicAuthNeeded"/>
+    <javac srcdir="${src}/Chapter08/BasicAuthNeeded"
+           destdir="${dest}/Chapter08/BasicAuthNeeded"/>
+
+    <mkdir dir="${dest}/Chapter08/Browser"/>
+    <javac srcdir="${src}/Chapter08/Browser"
+           destdir="${dest}/Chapter08/Browser"/>
+    <copy file="${src}/Chapter08/Browser/close.gif"
+          toDir="${dest}/Chapter08/Browser"/>
+
+    <mkdir dir="${dest}/Chapter08/Bypass403"/>
+    <javac srcdir="${src}/Chapter08/Bypass403"
+           destdir="${dest}/Chapter08/Bypass403"/>
+
+    <mkdir dir="${dest}/Chapter08/IDNConverter"/>
+    <javac srcdir="${src}/Chapter08/IDNConverter"
+           destdir="${dest}/Chapter08/IDNConverter"/>
+
+    <mkdir dir="${dest}/Chapter08/ListAllCookies"/>
+    <javac srcdir="${src}/Chapter08/ListAllCookies"
+           destdir="${dest}/Chapter08/ListAllCookies"/>
+
+    <mkdir dir="${dest}/Chapter08/MinimalHTTPServer"/>
+    <javac srcdir="${src}/Chapter08/MinimalHTTPServer"
+           destdir="${dest}/Chapter08/MinimalHTTPServer"/>
+
+    <mkdir dir="${dest}/Chapter08/NetParms"/>
+    <javac srcdir="${src}/Chapter08/NetParms"
+           destdir="${dest}/Chapter08/NetParms"/>
+  </target>
+
+  <target name="build09" description="build chapter 9 code">
+    <mkdir dir="${dest}/Chapter09/EnumerateScriptEngines"/>
+    <javac srcdir="${src}/Chapter09/EnumerateScriptEngines"
+           destdir="${dest}/Chapter09/EnumerateScriptEngines"/>
+
+    <mkdir dir="${dest}/Chapter09/FuncEvaluator"/>
+    <javac srcdir="${src}/Chapter09/FuncEvaluator"
+           destdir="${dest}/Chapter09/FuncEvaluator"/>
+    <copy toDir="${dest}/Chapter09/FuncEvaluator">
+      <fileset dir="${src}/Chapter09/FuncEvaluator">
+        <include name="*.js"/>
+      </fileset>
+    </copy>
+
+    <mkdir dir="${dest}/Chapter09/GetToKnowBindingsAndScopes"/>
+    <javac srcdir="${src}/Chapter09/GetToKnowBindingsAndScopes"
+           destdir="${dest}/Chapter09/GetToKnowBindingsAndScopes"/>
+
+    <mkdir dir="${dest}/Chapter09/MonthlyPayment"/>
+    <javac srcdir="${src}/Chapter09/MonthlyPayment"
+           destdir="${dest}/Chapter09/MonthlyPayment"/>
+
+    <mkdir dir="${dest}/Chapter09/ObtainScriptEngine"/>
+    <javac srcdir="${src}/Chapter09/ObtainScriptEngine"
+           destdir="${dest}/Chapter09/ObtainScriptEngine"/>
+
+    <mkdir dir="${dest}/Chapter09/RedirectScriptOutputToGUI"/>
+    <javac srcdir="${src}/Chapter09/RedirectScriptOutputToGUI"
+           destdir="${dest}/Chapter09/RedirectScriptOutputToGUI"/>
+
+    <mkdir dir="${dest}/Chapter09/ScriptedEditorPane"/>
+    <javac srcdir="${src}/Chapter09/ScriptedEditorPane"
+           destdir="${dest}/Chapter09/ScriptedEditorPane"/>
+    <copy file="${src}/Chapter09/ScriptedEditorPane/demo.html"
+          toDir="${dest}/Chapter09/ScriptedEditorPane"/>
+
+    <mkdir dir="${dest}/Chapter09/TemperatureConversion"/>
+    <javac srcdir="${src}/Chapter09/TemperatureConversion"
+           destdir="${dest}/Chapter09/TemperatureConversion"/>
+
+    <mkdir dir="${dest}/Chapter09/TestCompilationSpeed"/>
+    <javac srcdir="${src}/Chapter09/TestCompilationSpeed"
+           destdir="${dest}/Chapter09/TestCompilationSpeed"/>
+
+    <mkdir dir="${dest}/Chapter09/ThreadingBehavior"/>
+    <javac srcdir="${src}/Chapter09/ThreadingBehavior"
+           destdir="${dest}/Chapter09/ThreadingBehavior"/>
+
+    <mkdir dir="${dest}/Chapter09/WorkingWithJavaFXScript"/>
+    <javac srcdir="${src}/Chapter09/WorkingWithJavaFXScript"
+           destdir="${dest}/Chapter09/WorkingWithJavaFXScript"/>
+    <copy file="${src}/Chapter09/WorkingWithJavaFXScript/demo.fx"
+          toDir="${dest}/Chapter09/WorkingWithJavaFXScript"/>
+
+    <mkdir dir="${dest}/Chapter09/WorkingWithJRuby"/>
+    <javac srcdir="${src}/Chapter09/WorkingWithJRuby"
+           destdir="${dest}/Chapter09/WorkingWithJRuby"/>
+    <copy file="${src}/Chapter09/WorkingWithJRuby/TempConverter.rb"
+          toDir="${dest}/Chapter09/WorkingWithJRuby"/>
+  </target>
+
+  <target name="build10" description="build chapter 10 code">
+    <mkdir dir="${dest}/Chapter10/SkyView"/>
+    <exec executable="wsimport">
+      <arg value="-keep"/>
+      <arg value="-d"/>
+      <arg value="${dest}/Chapter10/SkyView"/>
+      <arg value="http://casjobs.sdss.org/ImgCutoutDR5/ImgCutout.asmx?wsdl"/>
+    </exec>
+    <javac srcdir="${src}/Chapter10/SkyView"
+           destdir="${dest}/Chapter10/SkyView"/>
+
+    <mkdir dir="${dest}/Chapter10/Terminals"/>
+    <javac srcdir="${src}/Chapter10/Terminals"
+           destdir="${dest}/Chapter10/Terminals"/>
+
+    <mkdir dir="${dest}/Chapter10/wsdemo"/>
+    <javac srcdir="${src}/Chapter10/wsdemo"
+           destdir="${dest}/Chapter10"/>
+    <exec executable="wsgen">
+      <arg value="-cp"/>
+      <arg value="${dest}/Chapter10"/>
+      <arg value="-d"/>
+      <arg value="${dest}/Chapter10"/>
+      <arg value="wsdemo.Converter"/>
+    </exec>
+    <java classname="wsdemo.RunConverter" classpath="${dest}/Chapter10"
+          fork="true" spawn="true"/>
+    <mkdir dir="${dest}/Chapter10/wsdemo/TestConverter"/>
+    <exec executable="wsimport">
+      <arg value="-keep"/>
+      <arg value="-d"/>
+      <arg value="${dest}/Chapter10/wsdemo/TestConverter"/>
+      <arg value="http://localhost:8080/WSDemo/Converter?wsdl"/>
+    </exec>
+    <javac srcdir="${src}/Chapter10/TestConverter"
+           destdir="${dest}/Chapter10/wsdemo/TestConverter"/>
+
+    <mkdir dir="${dest}/Chapter10/XMLSigDemo"/>
+    <javac srcdir="${src}/Chapter10/XMLSigDemo"
+           destdir="${dest}/Chapter10/XMLSigDemo"/>
+    <copy toDir="${dest}/Chapter10/XMLSigDemo">
+      <fileset dir="${src}/Chapter10/XMLSigDemo">
+        <include name="*.xml"/>
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="buildXB" description="build appendix B code">
+    <mkdir dir="${dest}/AppendixB/Classes"/>
+    <javac srcdir="${src}/AppendixB/Classes"
+           destdir="${dest}/AppendixB/Classes"/>
+
+    <mkdir dir="${dest}/AppendixB/Deadlock"/>
+    <javac srcdir="${src}/AppendixB/Deadlock"
+           destdir="${dest}/AppendixB/Deadlock"/>
+
+    <copy file="${src}/AppendixB/Stack/Stack.java"
+          toDir="${dest}/AppendixB/Stack"/>
+
+    <mkdir dir="${dest}/AppendixB/Stub"/>
+    <javac srcdir="${src}/AppendixB/Stub"
+           destdir="${dest}/AppendixB/Stub"
+           excludes="Calculator.java"/>
+    <copy file="${src}/AppendixB/Stub/Calculator.java"
+          toDir="${dest}/AppendixB/Stub"/>
+  </target>
+
+  <target name="buildXC" description="build appendix C code">
+    <mkdir dir="${dest}/AppendixC/GrayRectDemo"/>
+    <javac srcdir="${src}/AppendixC/GrayRectDemo"
+           destdir="${dest}/AppendixC/GrayRectDemo"/>
+  </target>
+
+  <target name="buildXD" description="build appendix D code">
+    <mkdir dir="${dest}/AppendixD/ch02/Copy"/>
+    <javac srcdir="${src}/AppendixD/ch02/Copy"
+           destdir="${dest}/AppendixD/ch02/Copy"/>
+
+    <mkdir dir="${dest}/AppendixD/ch02/ProductDB"/>
+    <javac srcdir="${src}/AppendixD/ch02/ProductDB"
+           destdir="${dest}/AppendixD/ch02/ProductDB"/>
+
+    <mkdir dir="${dest}/AppendixD/ch02/ROW"/>
+    <javac srcdir="${src}/AppendixD/ch02/ROW"
+           destdir="${dest}/AppendixD/ch02/ROW"/>
+
+    <mkdir dir="${dest}/AppendixD/ch03/LinkTest"/>
+    <javac srcdir="${src}/AppendixD/ch03/LinkTest"
+           destdir="${dest}/AppendixD/ch03/LinkTest"/>
+
+    <mkdir dir="${dest}/AppendixD/ch03/QuickLaunch"/>
+    <javac srcdir="${src}/AppendixD/ch03/QuickLaunch"
+           destdir="${dest}/AppendixD/ch03/QuickLaunch"/>
+
+    <mkdir dir="${dest}/AppendixD/ch04/BrowserWithPrint"/>
+    <javac srcdir="${src}/AppendixD/ch04/BrowserWithPrint"
+           destdir="${dest}/AppendixD/ch04/BrowserWithPrint"/>
+    <copy file="${src}/AppendixD/ch04/BrowserWithPrint/close.gif"
+          toDir="${dest}/AppendixD/ch04/BrowserWithPrint"/>
+
+    <mkdir dir="${dest}/AppendixD/ch04/PriceList1"/>
+    <javac srcdir="${src}/AppendixD/ch04/PriceList1"
+           destdir="${dest}/AppendixD/ch04/PriceList1"/>
+
+    <mkdir dir="${dest}/AppendixD/ch05/LocaleNameProviderImpl"/>
+    <javac srcdir="${src}/AppendixD/ch05/LocaleNameProviderImpl"
+           destdir="${dest}/AppendixD/ch05/LocaleNameProviderImpl"/>
+    <copy toDir="${dest}/AppendixD/ch05/LocaleNameProviderImpl">
+      <fileset dir="${src}/AppendixD/ch05/LocaleNameProviderImpl">
+        <exclude name="*.java"/>
+      </fileset>
+    </copy>
+    <jar destfile="${dest}/AppendixD/ch05/LocaleNameProviderImpl/tiER.jar"
+         basedir="${dest}/AppendixD/ch05/LocaleNameProviderImpl"/>
+
+    <mkdir dir="${dest}/AppendixD/ch05/ShowLocaleInfo"/>
+    <javac srcdir="${src}/AppendixD/ch05/ShowLocaleInfo"
+           destdir="${dest}/AppendixD/ch05/ShowLocaleInfo"/>
+
+    <mkdir dir="${dest}/AppendixD/ch05/ShowLocales"/>
+    <javac srcdir="${src}/AppendixD/ch05/ShowLocales"
+           destdir="${dest}/AppendixD/ch05/ShowLocales"/>
+
+    <mkdir dir="${dest}/AppendixD/ch06/DumpSchemas"/>
+    <javac srcdir="${src}/AppendixD/ch06/DumpSchemas"
+           destdir="${dest}/AppendixD/ch06/DumpSchemas"/>
+
+    <mkdir dir="${dest}/AppendixD/ch06/FuncSupported"/>
+    <javac srcdir="${src}/AppendixD/ch06/FuncSupported"
+           destdir="${dest}/AppendixD/ch06/FuncSupported"/>
+
+    <mkdir dir="${dest}/AppendixD/ch06/SQLROWIDSupported"/>
+    <javac srcdir="${src}/AppendixD/ch06/SQLROWIDSupported"
+           destdir="${dest}/AppendixD/ch06/SQLROWIDSupported"/>
+
+    <mkdir dir="${dest}/AppendixD/ch06/SQLXMLSupported"/>
+    <javac srcdir="${src}/AppendixD/ch06/SQLXMLSupported"
+           destdir="${dest}/AppendixD/ch06/SQLXMLSupported"/>
+
+    <mkdir dir="${dest}/AppendixD/ch07/LoadAverageViewer"/>
+    <javac srcdir="${src}/AppendixD/ch07/LoadAverageViewer"
+           destdir="${dest}/AppendixD/ch07/LoadAverageViewer"/>
+
+    <mkdir dir="${dest}/AppendixD/ch08/MinimalHTTPServer"/>
+    <javac srcdir="${src}/AppendixD/ch08/MinimalHTTPServer"
+           destdir="${dest}/AppendixD/ch08/MinimalHTTPServer"/>
+
+    <mkdir dir="${dest}/AppendixD/ch08/NetParms"/>
+    <javac srcdir="${src}/AppendixD/ch08/NetParms"
+           destdir="${dest}/AppendixD/ch08/NetParms"/>
+
+    <mkdir dir="${dest}/AppendixD/ch09/WorkingWithJRuby"/>
+    <javac srcdir="${src}/AppendixD/ch09/WorkingWithJRuby"
+           destdir="${dest}/AppendixD/ch09/WorkingWithJRuby"/>
+    <copy file="${src}/AppendixD/ch09/WorkingWithJRuby/demo.fx"
+          toDir="${dest}/AppendixD/ch09/WorkingWithJRuby"/>
+
+    <mkdir dir="${dest}/AppendixD/ch10/SkyView"/>
+    <exec executable="wsimport">
+      <arg value="-keep"/>
+      <arg value="-d"/>
+      <arg value="${dest}/AppendixD/ch10/SkyView"/>
+      <arg value="http://casjobs.sdss.org/ImgCutoutDR5/ImgCutout.asmx?wsdl"/>
+    </exec>
+    <javac srcdir="${src}/AppendixD/ch10/SkyView"
+           destdir="${dest}/AppendixD/ch10/SkyView"/>
+  </target>
+
+  <target name="cleanup">
+    <delete dir="${dest}"/>
+  </target>
+</project>

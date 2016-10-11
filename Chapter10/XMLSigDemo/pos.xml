@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <po>
+    <items>
+      <item>
+        <code>hw-1021</code>
+        <desc>Hammer</desc>
+        <qty>5</qty>
+        <unitcost>11.99</unitcost>
+      </item>
+      <item>
+        <code>hw-2103</code>
+        <desc>Solar lights</desc>
+        <qty>10</qty>
+        <unitcost>24.99</unitcost>
+      </item>
+    </items>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-
+                                           c14n-20010315#WithComments"/>
+        <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig
+                                    #dsa-sha1"/>
+        <Reference Id="MyRef" URI="">
+          <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#
+                                  enveloped-signature"/>
+          </Transforms>
+          <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+          <DigestValue>nquYM0ZPk5K6di76vnt63xvR1jI=</DigestValue>
+        </Reference>
+      </SignedInfo>
+      <SignatureValue>ftXiy7gIDtU6O1BibABWfc+VteJw2O8xKMTALt14lm091ATeU88+jA==
+      </SignatureValue>
+      <KeyInfo>
+        <KeyValue>
+          <DSAKeyValue>
+            <P>/KaCzo4Syrom78z3EQ5SbbB4sF7ey80etKII864WF64B81uRpH5t9jQTxeEu0Im
+               bzRMqzVDZkVG9xD7nN1kuFw==</P>
+            <Q>li7dzDacuo67Jg7mtqEm2TRuOMU=</Q>
+            <G>Z4Rxsnqc9E7pGknFFH2xqaryRPBaQ01khpMdLRQnG541Awtx/XPaF5Bpsy4pNWM
+               OHCBiNU0NogpsQW5QvnlMpA==</G>
+            <Y>ajryQOwA2H77GAt6LNhGwPALyGLMu/e7T70ytj0bxp0RQndX++ydqzKXW6P0VZj
+               1X9lRW3rVxE0RBxp4yb7eMQ==</Y>
+          </DSAKeyValue>
+        </KeyValue>
+      </KeyInfo>
+    </Signature>
+  </po>
